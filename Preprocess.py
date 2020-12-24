@@ -221,3 +221,24 @@ def open_summaries(pa):
         i+=1
     return(summaries)
 
+def clean_text2(row, transformations):
+  row=str(row).lower()
+  for key in transformations.keys():
+  	row=row.replace(key,transformations[key])
+  row=re.sub(r"[<>()|&©ø\[\]\"~*]", ' ', row) #remove <>()|&©ø"',;?~*!
+  row= re.sub(r"'s\b","", row) # remove "'s"
+  row = re.sub("'",'', row)     # remove single quotes
+  row=re.sub("(__+)", ' ', row)   #remove _ if it occors more than one time consecutively
+  row=re.sub("(--+)", ' ', row)   #remove - if it occors more than one time consecutively
+  row=re.sub("(\+\++)", ' ', row)   #remove + if it occors more than one time consecutively
+  row=re.sub("(\.\.+)", ' ', row)   #remove . if it occors more than one time consecutively
+  combined_pat = r'|'.join((r'https?://[^ ]+', r'www.[^ ]+'))
+  row=clean3 = re.sub(combined_pat, '', row)
+  patterns_to_remove = ['\w+\.com.', 'CLICK HERE.*', '\(CNN\)', 'NEW\:', 'All righs reserved\.', '\w+\.net.']
+  for pattern in patterns_to_remove:
+    row=re.sub(pattern, '',row)
+  row = re.sub(r'([!?.-])\B', r' \1', row) # insert space before punctuation
+  row = re.sub(r'([:,;]\B)', r' \1', row) # insert space before ending colon, semi-colon, semi-period
+  row = re.sub("(\s+)",' ',str(row)) #remove multiple spaces
+ 
+  return (row)
