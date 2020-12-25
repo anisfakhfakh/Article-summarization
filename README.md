@@ -49,5 +49,5 @@ The project uses the data: CNN news articles and their summarires in order to sy
 
 
 ## Credits
-1. https://github.com/glopasso/text-summarization for the summureization pipeline inspiration
+1. https://github.com/glopasso/text-summarization for the summarization pipeline inspiration
 2. Data credits: https://cs.nyu.edu/~kcho/DMQA/
