@@ -16,6 +16,10 @@ The objective of this project is to build a text summarizer using both extractiv
 * Data cleaning
 * Rouge Scoring
 * Sentence scoring
+* Tokenization
+* Transformers
+* Attention mechanism
+* Word embeddings
 * etc.
 
 ### Technologies
@@ -28,6 +32,7 @@ The objective of this project is to build a text summarizer using both extractiv
 * WordCloud
 * Rouge
 * Matplotlib
+* Tensorflow
 * stats
 
 ## Project Description
@@ -39,6 +44,7 @@ The project uses the data: CNN news articles and their summarires in order to sy
 3. Data preprocessing
 4. Data Data analysis
 5. Extractive summary pipeline
+6. Same data is used for abstractive approach
 
 
 
