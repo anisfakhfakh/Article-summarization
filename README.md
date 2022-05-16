@@ -2,13 +2,13 @@
 This project is an attempt to try the different text summarization techniques.
 My other projects will be porgressively uploaded at the [main GitHub repo](https://github.com/anisfakhfakh).
 
-#### -- Project Status: [Active]
+#### -- Project Status: [Complete]
 
 ## Project Objective
 The objective of this project is to build a text summarizer using both extractive and abstractive summarization techniques to summariez the CNN stories (articles).
 
 ### Methods Used
-* Natural Nalguage processing
+* Natural Language processing
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
